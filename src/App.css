@@ -1,0 +1,318 @@
+.root {
+  margin: 0;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #2e354f;
+}
+
+/* img { */
+/* width: 100%; */
+/* } */
+
+a:link {
+  color: peru;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(167, 149, 117);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
+  opacity: 0.56;
+}
+
+#social-media-icons:link {
+  color: blue;
+  background: black;
+
+}
+
+.contact-btn {
+  position: fixed;
+  top: 120px;
+  right: -14px;
+  z-index: 10;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.carousel {
+  background:navajowhite;
+  margin-top: 15px;
+  height: 400px;
+}
+
+.carousel-item {
+  text-align: center;
+  min-height: 400px;
+  /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+
+#clientCarousel {
+  background: white;
+  margin-top: 15px;
+  height: 300px;
+}
+
+#item_in_clientCarosuel {
+  text-align: center;
+  min-height: 400px;
+}
+
+.image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.client-pic {
+  /* display: inline; */
+  margin: 0 auto;
+  margin-left: -25%;
+  height: 100%;
+  width: auto;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  /* bottom: 0;  */
+  right: 0;
+  /* width: 100%; */
+  /* background-color: black; */
+  color: white;
+  text-align: center;
+}
+
+#footer_content {
+  color: wheat;
+  font-style: italic;
+  font-size: medium;
+}
+
+#footer_row {
+  margin-top: 50px;
+}
+
+#icons {
+  color: red;
+  font-size: large;
+}
+
+#form_styles,
+#form_styles1,
+#form_styles2 {
+  background-color: black;
+  color: wheat;
+}
+
+textarea {
+  width: 1000px;
+}
+
+#contact_content {
+  color: wheat;
+  font-style: italic;
+}
+
+h3 {
+  color: white;
+}
+
+#leading_words {
+  font-weight: bold;
+  color: wheat;
+}
+
+#con_info {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.col-md-3,
+.footer-about-content,
+.social-media {
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 70%;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.description {
+  color: pink;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.col-md-3 button {
+  border: none;
+  outline: 0;
+  padding: 2px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: not-allowed;
+  width: 100%;
+  font-size: 18px;
+}
+
+.col-md-3 button:hover {
+  opacity: 0.76;
+}
+
+.mug-header {
+  text-align: center;
+  /* background-color: green; */
+  width: 100%;
+  height: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+.client-img {
+  border-radius: 50%;
+}
+
+#error-displayer {
+  text-align: center;
+  color: white;
+  background: black;
+  border: 2px solid yellow;
+  border-style: dashed;
+  margin-top: 200px;
+  box-shadow: 10px 20px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 70%;
+  /* margin: auto; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*Carousel CSS*/
+
+* {
+  box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.inner {
+  overflow: hidden;
+}
+
+.inner img{
+    transition: all 1.5s ease;
+}
+
+.inner:hover img{
+  transform: scale(1.5);
+}
