@@ -47,48 +47,66 @@ class ContactForm extends Component {
 
         
     }
-        return ( 
-                   <div className={this.props.className} onClick={ContactValidation} id={this.props.formWrapper} style={this.props.style}>
-                        <h3> {this.props.header}</h3>
-                        <div className="form-group">
-                          <input type="email" 
-                          className="form-control" 
-                          value={this.state.email} 
-                          name="email" 
-                          id={this.props.formId1}
-                          aria-describedby="emailHelpId" 
-                          placeholder="Your e-mail"
-                          onChange={this.handlechange}
-                          required/>
-                        <label id="emailCorrector" style={label_styles} for="email">Enter your e-mail</label>
-                        </div>
+        return (
+          <form
+            name={this.props.formName}
+            action="POST"
+            data-netlify="true"
+            className={this.props.className}
+            onClick={ContactValidation}
+            id={this.props.formWrapper}
+            style={this.props.style}
+          >
+            <h3> {this.props.header}</h3>
+            <div className="form-group">
+              <input
+                type="email"
+                className="form-control"
+                value={this.state.email}
+                name="email"
+                id={this.props.formId1}
+                aria-describedby="emailHelpId"
+                placeholder="Your e-mail"
+                onChange={this.handlechange}
+                required
+              />
+              <label id="emailCorrector" style={label_styles} for="email">
+                Enter your e-mail
+              </label>
+            </div>
 
-                        <div className="form-group">
-                          <input type="text" 
-                          className="form-control" 
-                          name="fullname" 
-                          id={this.props.formId2}
-                          aria-describedby="helpId" 
-                          placeholder="Your name" 
-                          value={this.state.fullname}
-                          onChange={this.handlechange}
-                          required/>
-                        <label id="nameCorrector" style={label_styles} for="fullname"> Enter your Full Name</label>
-                        </div>
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-control"
+                name="fullname"
+                id={this.props.formId2}
+                aria-describedby="helpId"
+                placeholder="Your name"
+                value={this.state.fullname}
+                onChange={this.handlechange}
+                required
+              />
+              <label id="nameCorrector" style={label_styles} for="fullname">
+                {" "}
+                Enter your Full Name
+              </label>
+            </div>
 
-                          <div className="form-group">
-                            <label for="Message"></label>
-                            <textarea 
-                            className="form-control mb2" 
-                            name="message" 
-                            id={this.props.formId3} 
-                            placeholder="Your Message"
-                            />
-                          </div>
-                            <button type="submit" name="" id="" className={this.props.btnClass}>Submit</button>
-
-                </div>
-                   );
+            <div className="form-group">
+              <label for="Message"></label>
+              <textarea
+                className="form-control mb2"
+                name="message"
+                id={this.props.formId3}
+                placeholder="Your Message"
+              required/>
+            </div>
+            <button type="submit" name="" id="" className={this.props.btnClass}>
+              Submit
+            </button>
+          </form>
+        );
     }
 }
  

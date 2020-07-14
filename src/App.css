@@ -9,6 +9,29 @@
 /* width: 100%; */
 /* } */
 
+#nav-bar {
+  padding: 30px 0;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.header-scrolled {
+  background: lightcoral;
+  padding: 20px 0;
+  opacity: 0.7;
+  height: 300px;
+  transition: all 0.5s;
+}
+
+#navbar-content {
+  color: white;
+}
+
 a:link {
   color: peru;
   text-decoration: none;
@@ -25,10 +48,21 @@ a:hover {
   opacity: 0.56;
 }
 
+#dropdown-items:hover{
+  background-color: lightcoral;
+  
+}
+.link-items:hover{
+  background-color:brown ;
+  border-radius: 30%;
+  border: 1px solid ;
+}
+
+
+
 #social-media-icons:link {
   color: blue;
   background: black;
-
 }
 
 .contact-btn {
@@ -37,13 +71,14 @@ a:hover {
   right: -14px;
   z-index: 10;
 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .carousel {
-  background:navajowhite;
+  background: black;
   margin-top: 15px;
-  height: 400px;
+  height: 100%;
 }
 
 .carousel-item {
@@ -131,9 +166,9 @@ h3 {
 }
 
 #con_info {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 
 .col-md-3,
 .footer-about-content,
@@ -148,7 +183,8 @@ h3 {
 .description {
   color: pink;
   font-size: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .col-md-3 button {
@@ -172,9 +208,9 @@ h3 {
   /* background-color: green; */
   width: 100%;
   height: 100%;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-
 
 .client-img {
   border-radius: 50%;
@@ -190,13 +226,14 @@ h3 {
   box-shadow: 10px 20px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 70%;
   /* margin: auto; */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /*Carousel CSS*/
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 /* Slideshow container */
@@ -272,7 +309,6 @@ h3 {
   transition: background-color 0.6s ease;
 }
 
-
 .dot:hover {
   background-color: #717171;
 }
@@ -287,21 +323,21 @@ h3 {
 
 @-webkit-keyframes fade {
   from {
-    opacity: .4
+    opacity: 0.4;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes fade {
   from {
-    opacity: .4
+    opacity: 0.4;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -309,10 +345,10 @@ h3 {
   overflow: hidden;
 }
 
-.inner img{
-    transition: all 1.5s ease;
+.inner img {
+  transition: all 1.5s ease;
 }
 
-.inner:hover img{
+.inner:hover img {
   transform: scale(1.5);
 }

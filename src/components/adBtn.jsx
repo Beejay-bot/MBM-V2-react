@@ -7,7 +7,7 @@ const AdBtn = () => {
       <div>
         <a  className="hide-s contact-btn" href="contact">
           <button className="btn btn-danger" data-toggle="modal" data-target="#myModal">
-            <span className="badge badge-light"> SEND A MESSAGE</span>
+            <span className="badge"> SEND A MESSAGE</span>
           </button></a>
           
           <div id="myModal" className="modal fade" role="dialog">

@@ -1,64 +1,114 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from "react";
+import $ from "jquery";
 
-function navNewText()
-{
-    document.getElementsByClassName("brand_name").innerHTML = "Welcome"
-    document.getElementsByClassName("brand_name").style = {color:"blue"}
+function NewText() {
+    document.getElementById("brand_name").innerHTML = "Welcome"
+    document.getElementById("brand_name").style.color = "white"
 }
 
-function defaultImage()
-{
-    document.getElementsByClassName("brand_name").src = "img/MBM2.png"
-    document.getElementsByClassName("brand_name").style.height = "70px"
+function defaultImage() {
+  document.getElementById("brand_name").src = "img/MBM2.png";
+  document.getElementById("brand_name").style.width = "10%";
+  document.getElementById("brand_name").style.marginLeft = "10px"
 }
 
+class Navbar extends React.Component {
+  componentDidMount() {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $("#nav-bar").addClass("header-scrolled");
+      } else {
+        $("#nav-bar").removeClass("header-scrolled");
+      }
+    });
 
-const Navbar = () => {
-    return ( 
-        <div>
-            <nav className="nav justify-content-center bg-dark" style={{fontSize:"small"}}>
-                <p className="nav-item nav-link active" style={{color:"white"}}>
-                    Contact us: 234 2941 5094
-                </p>
-                <span style={{color:"white", marginTop:"8px"}}>|</span>
-                <p><a href="mailto:mugsbottlesnmore@gmail.com" className="nav-item nav-link">mugsbottlesnmore@gmail.com</a></p>
-                <span style={{ color: "white", marginTop: "8px" }}>|</span>
-                <p>
-                    <a href="https://www.instagram.com/mugsbottlesnmore/?hl=en" target="blank">
-                        <FontAwesomeIcon icon={['fab', 'instagram']} style={{fontSize:"large", marginTop:"10px"}} /> 
-                    
-                    </a>
-                </p>
-            </nav>
-            
-            <nav className="navbar navbar-expand-md navbar-light bg-light">
-                <img src="img/MBM2.png" className="navbar-brand brand_name" height="70px" alt="Mug,Bottle& More logo"
-                onMouseOver={navNewText} 
-                onMouseOut={defaultImage}/>
+    if ($(window).scrollTop() > 100) {
+      $("#nav-bar").addClass("header-scrolled");
+    }
+  }
 
-                <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+  render() {
+      const styles ={
+          color:"lightgreen"
+      }
 
-                <div className="collapse navbar-collapse justify-content-end nav-pills" id="navbarCollapse">
-                <div className="navbar-nav text-center">
-                    <a href="/" className="nav-item nav-link active">Home</a>
-                    <div className="nav-item dropdown">
-                        <a href="#end" className="nav-link dropdown-toggle" data-toggle="dropdown">Products</a>
-                            <div className="dropdown-menu">
-                                <a href="/mug" className="dropdown-item">Mugs</a>
-                                <a href="/bottle" className="dropdown-item">Bottles</a>
-                            </div>
-                    </div>
-                        <a href="/about" className="nav-item nav-link">About</a>
-                        <a href="/contact" className="nav-item nav-link">Contact</a>
+      const dropDownStyles = {
+          color:"lightgreen",
+      }
+    return (
+      <div>
+        <nav className="navbar navbar-expand-md navbar-light " id="nav-bar">
+          <span id="line-design"></span>
+          <img
+            src="img/MBM2.png"
+            alt="Mugs,Bottle& More logo"
+            width="10%"
+            style={{ marginLeft: "10px" }}
+            id="brand_name"
+            onMouseOver={NewText}
+            onMouseOut={defaultImage}
+          />
+          <p style={{fontSize:"small", marginLeft:"5px", fontFamily:"Gothic", color:"wheat"}}>
+            Welcome to Mugs,Bottle & More.
+          </p>
+
+          <button
+            type="button"
+            className="navbar-toggler btn-danger" 
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="navbarCollapse"
+          >
+            <div className="navbar-nav text-center" id="navbar-content">
+              <a href="/" className="nav-item link-items nav-link active" style={styles}>
+                Home
+              </a>
+              <div className="nav-item dropdown">
+                <a
+                  href="#end"
+                  className="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  style={styles}
+                >
+                  Products
+                </a>
+                <div className="dropdown-menu">
+                  <a
+                    href="/mug"
+                    className="dropdown-item"
+                    id="dropdown-items"
+                    style={dropDownStyles}
+                  >
+                    Mugs
+                  </a>
+                  <a
+                    href="/bottle"
+                    className="dropdown-item"
+                    id="dropdown-items"
+                    style={dropDownStyles}
+                  >
+                    Bottles
+                  </a>
                 </div>
-                </div>
-            </nav>
-
-        </div>
-     );
+              </div>
+              <a href="/about" className="nav-item nav-link" style={styles}>
+                About
+              </a>
+              <a href="/contact" className="nav-item nav-link" style={styles}>
+                Contact
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    );
+  }
 }
- 
+
 export default Navbar;

@@ -17,7 +17,7 @@ class Footer extends Component {
             <div
               id="social_media_container"
               style={{
-                backgroundColor: "green",
+                backgroundColor: "lightcoral",
                 height: "80px",
                 textAlign: "center",
               }}
@@ -28,12 +28,6 @@ class Footer extends Component {
               >
                 <FontAwesomeIcon
                   icon={["fab", "instagram"]}
-                  style={{ fontSize: "30px", marginTop: "20px" }}
-                />
-              </a>
-              <a href="#twitter" target="blank">
-                <FontAwesomeIcon
-                  icon={["fab", "twitter"]}
                   style={{ fontSize: "30px", marginTop: "20px" }}
                 />
               </a>
@@ -74,7 +68,7 @@ class Footer extends Component {
                   </div>
                   <div className="col-md-3 " id="footer_row">
                     <h3> Contact us.</h3>
-                    <p id="contact_content" style={{width:"100%"}}>
+                    <p id="contact_content" style={{ width: "100%" }}>
                       <FontAwesomeIcon icon="envelope" id="icons" />
                       <span id="leading_words">Email:</span>
                       <a
@@ -113,6 +107,7 @@ class Footer extends Component {
                     </p>
                   </div>
                   <ContactForm
+                    formName="footerForm"
                     styles={form_styles}
                     header="Get a Quote."
                     formId1="form_styles1"
@@ -132,13 +127,11 @@ class Footer extends Component {
                     className="col-md-4 col-sm-4 text-md-right"
                     style={{ color: "white" }}
                   >
-                    Design & coding by Bolaji
-                    <span className="text-muted mx-2">|</span>
                     <a
                       href="mailto:akisanyamobolaji@gmail.com"
                       className="text"
                     >
-                      akisanyamobolaji@gmail.com
+                      Coding by Bolaji
                     </a>
                   </div>
                 </div>

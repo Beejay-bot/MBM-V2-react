@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from './navbar';
 import AdBtn from './adBtn'
-import Carousel, {CarouselTwo} from './Carousel'
+import Carousel from './Carousel'
 import MugDisplayer from './mugDisplayer'
 import Footer from './footer'
 
@@ -12,14 +12,13 @@ function Home() {
     <div>
       <AdBtn />
       <Navbar />
-      <hr />
       <Carousel
         id="mycarousel"
         idTarget="#mycarousel"
-        imgurl="img/fathers_day_mug_sample.png"
-        imgurl2="img/medicine-5103043__340.webp"
+        imgurl="img/kaboompics_Mugs (1).jpg"
+        imgurl2="img/hand-holding-coffee-near-book-and-phone.jpg "
         description2="We appreciate all frontline workers for the efforts they put in the battle of Covid-19"
-        imgurl3="img/stay-home-save-lives-4983843__340.webp"
+        imgurl3="img/coffee-table-set-up-to-thank-you.jpg"
       />
 
       <div className="container-fluid">
@@ -90,7 +89,7 @@ function Home() {
             individual_ID="spb"
             description="The perfect bottles for storing hot or cold liquid content."
             imgurl="img/productsGallery/images.jpg"
-             imgurl2="img/special_rounded_bottle.png"
+            imgurl2="img/special_rounded_bottle.png"
           />
         </div>
       </div>
@@ -117,11 +116,10 @@ function Home() {
         workTitle2="COO Lufigs farm / Chief Writer GhostWriters.ng"
         imgurl3="img/client3.jpg"
         name3="MRS. Akisanya"
-        description3="Their are products are quality and they deliver on time"
+        description3="I've had other print company to customize my mugs for me, but none can be compared to Mugs,Bottle&More. On time delivery and beautiful designs."
         workTitle3="Educationist"
       />
 
-      
       <Footer />
     </div>
   );

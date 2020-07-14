@@ -93,7 +93,8 @@ const Contact = () => {
                 Send us a Message
               </h2>
 
-              <ContactForm btnClass="btn btn-block btn-primary" />
+              <ContactForm btnClass="btn btn-block btn-primary" 
+              formName="contactForm"/>
             </div>
           </div>
         </div>
